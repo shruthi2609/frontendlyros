@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import './UserLogin.css';
 function UserLogin() {
   const [adminData, setadminData] = useState([])
-  const [errorBox, seterrorBox] = useState()
+  const [errorBox] = useState()
   const [errorPassword, seterrorPassword] = useState()
   const [passwordVisible, setpasswordVisible] = useState(false)
   const [errorName, seterrorName] = useState()
@@ -43,7 +43,7 @@ function UserLogin() {
     }
     else if (keyword === "photo") {
       console.log(e.target.files)
-      const file = e.target.files[0]
+   
       setAdminPhoto(e.target.files[0])
     }
   }
